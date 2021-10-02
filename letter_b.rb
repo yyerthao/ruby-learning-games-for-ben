@@ -6,7 +6,7 @@ letter_b = "b"
 try = ''
 try_count = 1
 try_limit = 5
-wrote_correctly = true
+wrote_correctly = false
 
 while try != letter_b and try_count <= try_limit
   puts "Write the letter b: "
