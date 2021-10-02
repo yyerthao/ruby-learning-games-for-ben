@@ -1,14 +1,14 @@
-# ---------- Helping Ben write the letter E
+# ---------- Helping Ben write the number 2
 
-letter = "e"
+number = "2"
 attempt = ""
 try_count = 0
 try_limit = 3
 out_of_tries = false
 
-while attempt != letter and !out_of_tries
+while attempt != number and !out_of_tries
   if try_count < try_limit
-    puts "|| Write the letter E || "
+    puts "|| Write the number 2|| "
     attempt = gets.chomp()
     try_count += 1
   else

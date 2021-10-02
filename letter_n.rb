@@ -1,18 +1,23 @@
-puts 'Hi Ben.'
-letter_n = "n"
-try = ''
-try_count = 1
-try_limit = 5
-wrote_correctly = false
+# ---------- Helping Ben write the letter n
 
-while try != letter_n and try_count <= try_limit
-  puts "Write the letter n: "
-  try = gets.chomp()
-  try_count += 1
+letter = "n"
+attempt = ""
+try_count = 0
+try_limit = 3
+out_of_tries = false
+
+while attempt != letter and !out_of_tries
+  if try_count < try_limit
+    puts "|| Write the letter N || "
+    attempt = gets.chomp()
+    try_count += 1
+  else
+    out_of_tries = true
+  end
 end
 
-if wrote_correctly
-  puts 'Good job!'
+if out_of_tries
+  puts ":( Try again"
 else
-  puts 'Try again!'
+  puts " :) You won!"
 end

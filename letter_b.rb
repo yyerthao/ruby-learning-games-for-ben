@@ -1,21 +1,23 @@
-# Program to help Ben learn
+# ---------- Helping Ben write the letter B
 
+letter = "b"
+attempt = ""
+try_count = 0
+try_limit = 3
+out_of_tries = false
 
-puts 'Hi Ben.'
-letter_b = "b"
-try = ''
-try_count = 1
-try_limit = 5
-wrote_correctly = false
-
-while try != letter_b and try_count <= try_limit
-  puts "Write the letter b: "
-  try = gets.chomp()
-  try_count += 1
+while attempt != letter and !out_of_tries
+  if try_count < try_limit
+    puts "|| Write the letter B || "
+    attempt = gets.chomp()
+    try_count += 1
+  else
+    out_of_tries = true
+  end
 end
 
-if wrote_correctly
-  puts 'Good job!'
+if out_of_tries
+  puts ":( Try again"
 else
-  puts 'Try again!'
+  puts " :) You won!"
 end
